@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midnight Vault — a heist game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0d0f1a;
+    color: #e8e6d8;
+    font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  canvas {
+    max-width: 96vw;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    background: #171a26;
+    border: 2px solid #2c3149;
+    border-radius: 8px;
+  }
+  .hint {
+    font-size: 13px;
+    color: #9aa0b5;
+    text-align: center;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  #selftest {
+    font: 12px monospace;
+    color: #59c98a;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="640"></canvas>
+<p class="hint">WASD / arrows to move &nbsp;•&nbsp; E smoke pellet &nbsp;•&nbsp; P pause &nbsp;•&nbsp; M mute &nbsp;•&nbsp; grab the loot, then reach the EXIT</p>
+<p id="status" class="visually-hidden" aria-live="polite"></p>
+<p id="selftest"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
